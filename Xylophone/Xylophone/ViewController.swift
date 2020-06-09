@@ -20,6 +20,14 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
 
     @IBAction func pressedKey(_ sender: UIButton) {
         playSound(note: sender.tag)
+        
+        sender.alpha = 0.75
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+            UIView.animate(withDuration: 0.15) {
+                sender.alpha = 1.0
+            }
+        }
     }
     
     func playSound(note: Int) {
