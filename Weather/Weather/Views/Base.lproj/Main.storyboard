@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="XQi-BV-cQy">
-                                <rect key="frame" x="20" y="64" width="374" height="324.66666666666669"/>
+                                <rect key="frame" x="20" y="64" width="374" height="369.66666666666669"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZxL-l3-BZY">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
@@ -54,8 +54,14 @@
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sun with rain" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dvw-S1-HVX">
+                                        <rect key="frame" x="239" y="55" width="135" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                                        <color key="textColor" name="weatherColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud.sun.rain.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sig-T3-yEY">
-                                        <rect key="frame" x="254" y="52.333333333333336" width="120" height="125.33333333333334"/>
+                                        <rect key="frame" x="254" y="97.333333333333343" width="120" height="125.33333333333331"/>
                                         <color key="tintColor" name="weatherColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="120" id="c1c-G3-p7p"/>
@@ -63,7 +69,7 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nfG-mZ-GVv">
-                                        <rect key="frame" x="225" y="190" width="149" height="71.666666666666686"/>
+                                        <rect key="frame" x="225" y="234.99999999999997" width="149" height="71.666666666666657"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljk-TU-lo4">
                                                 <rect key="frame" x="0.0" y="0.0" width="74.333333333333329" height="71.666666666666671"/>
@@ -86,7 +92,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Berne" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Sh-1f-6nm">
-                                        <rect key="frame" x="275" y="276.66666666666669" width="99" height="48"/>
+                                        <rect key="frame" x="275" y="321.66666666666669" width="99" height="48"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="40"/>
                                         <color key="textColor" name="weatherColor"/>
                                         <nil key="highlightedColor"/>
@@ -111,6 +117,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="weatherConditionLabel" destination="Dvw-S1-HVX" id="ixy-lG-zGT"/>
                         <outlet property="weatherImage" destination="sig-T3-yEY" id="YX6-Nb-a5S"/>
                         <outlet property="weatherLocationLabel" destination="5Sh-1f-6nm" id="j4f-xA-Po3"/>
                         <outlet property="weatherSearchTextfield" destination="1Dg-zw-3Bh" id="8nW-Iw-yS2"/>
