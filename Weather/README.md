@@ -1,5 +1,5 @@
 #  Weather App
-Search for the wather using an HTTP request.
+Search for the weather using an HTTPs request and the OpenWeather API.
 
 ## Light Mode
 <p align="center">
