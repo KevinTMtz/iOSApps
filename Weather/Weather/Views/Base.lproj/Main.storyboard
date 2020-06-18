@@ -33,6 +33,9 @@
                                                 </constraints>
                                                 <color key="tintColor" name="weatherColor"/>
                                                 <state key="normal" backgroundImage="location.circle" catalog="system"/>
+                                                <connections>
+                                                    <action selector="locationPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ohj-90-7Pv"/>
+                                                </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="right" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1Dg-zw-3Bh">
                                                 <rect key="frame" x="50" y="0.0" width="274" height="40"/>

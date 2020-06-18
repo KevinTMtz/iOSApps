@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import CoreLocation
 
 class WeatherViewController: UIViewController {
     var weatherManager = WeatherManager()
+    let locationManager = CLLocationManager()
     
     @IBOutlet weak var weatherSearchTextfield: UITextField!
     @IBOutlet weak var weatherImage: UIImageView!
@@ -20,10 +22,16 @@ class WeatherViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestLocation()
+        
         weatherManager.delegate = self
         weatherSearchTextfield.delegate = self
-        
-        weatherManager.fetchWeather(cityName: "Bern", delegate: self)
+    }
+    
+    @IBAction func locationPress(_ sender: UIButton) {
+        locationManager.requestLocation()
     }
 }
 
@@ -37,7 +45,7 @@ extension WeatherViewController: UITextFieldDelegate {
     // After end editing
     func textFieldDidEndEditing(_ textField: UITextField) {
         if let city = weatherSearchTextfield.text {
-            weatherManager.fetchWeather(cityName: city, delegate: self)
+            weatherManager.fetchWeatherByName(cityName: city, delegate: self)
         }
         
         weatherSearchTextfield.text = ""
@@ -77,6 +85,24 @@ extension WeatherViewController: WeatherManagerDelegate {
     }
     
     func didFailWithError(error: Error) {
+        print(error)
+    }
+}
+
+// MARK: - CLLocationManagerDelegate
+
+extension WeatherViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last {
+            locationManager.stopUpdatingLocation()
+            let lat = location.coordinate.latitude
+            let long = location.coordinate.longitude
+            
+            weatherManager.fetchWeatherByCoordinates(lat: lat, lon: long, delegate: self)
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)
     }
 }

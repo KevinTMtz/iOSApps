@@ -17,10 +17,13 @@ struct WeatherManager {
     let weatherURL = "https://api.openweathermap.org/data/2.5/weather?appid=958403eb465fdf9615bd082392037c6a&units=metric"
     var delegate: WeatherManagerDelegate?
     
-    mutating func fetchWeather(cityName: String, delegate: WeatherManagerDelegate) {
-        let urlStr = "\(weatherURL)&q=\(cityName)"
-        self.delegate = delegate
-        
+    mutating func fetchWeatherByName(cityName: String, delegate: WeatherManagerDelegate) {
+        let urlStr = "\(weatherURL)&q=\(cityName.replacingOccurrences(of: " ", with: "+"))"
+        performRequest(with: urlStr)
+    }
+    
+    mutating func fetchWeatherByCoordinates(lat: Double, lon: Double, delegate: WeatherManagerDelegate) {
+        let urlStr = "\(weatherURL)&lat=\(lat)&lon=\(lon)"
         performRequest(with: urlStr)
     }
     
