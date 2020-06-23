@@ -1,0 +1,11 @@
+platform :ios, '13.0'
+
+target 'Messenger' do
+  use_frameworks!
+
+  # Pods for Messenger
+  pod 'CLTypingLabel', '~> 0.4.0'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+
+end

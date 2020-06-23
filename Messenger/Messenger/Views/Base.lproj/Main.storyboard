@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V4z-bS-F8b">
     <device id="retina6_5" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,13 +11,13 @@
         <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Welcome View Controller" id="BYZ-38-t0r" customClass="ViewController" customModule="Messenger" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Welcome View Controller" id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="Messenger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kevin Chat 📬" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uaO-dy-tgO">
-                                <rect key="frame" x="45" y="417.66666666666669" width="324" height="61"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kevin Chat 📬" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uaO-dy-tgO" customClass="CLTypingLabel" customModule="CLTypingLabel">
+                                <rect key="frame" x="207" y="417.66666666666669" width="0.0" height="61"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="YdG-xb-nRr"/>
                                 </constraints>
@@ -34,6 +35,9 @@
                                 <state key="normal" title="Register">
                                     <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="1dE-N1-XYq" kind="show" id="Trf-Xc-IsD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pic-pI-qqt">
                                 <rect key="frame" x="0.0" y="734" width="414" height="60"/>
@@ -45,6 +49,9 @@
                                 <state key="normal" title="Log in">
                                     <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Caf-wS-2ys" kind="show" id="sbs-yk-8YK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -60,39 +67,43 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="1aB-JB-hsz"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="uaO-dy-tgO" id="uSj-pz-hln"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-203" y="464"/>
+            <point key="canvasLocation" x="705.79710144927537" y="463.39285714285711"/>
         </scene>
         <!--Register  View Controller-->
         <scene sceneID="fjF-Wq-g5o">
             <objects>
-                <viewController title="Register  View Controller" id="1dE-N1-XYq" sceneMemberID="viewController">
+                <viewController title="Register  View Controller" id="1dE-N1-XYq" customClass="RegisterViewController" customModule="Messenger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C87-ya-er0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xZZ-5v-nKQ">
-                                <rect key="frame" x="32" y="84" width="350" height="61"/>
-                                <color key="backgroundColor" red="0.64991664169999996" green="0.72020006349999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="32" y="128" width="350" height="61"/>
+                                <color key="backgroundColor" name="defaultBlue"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="QEl-Cj-cmH"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fc8-M2-yTL">
-                                <rect key="frame" x="32" y="165" width="350" height="61"/>
-                                <color key="backgroundColor" red="0.64991664169999996" green="0.72020006349999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="32" y="209" width="350" height="61"/>
+                                <color key="backgroundColor" name="defaultBlue"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="NaX-4h-Rc3"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvE-m5-Mgq">
-                                <rect key="frame" x="52" y="256" width="310" height="40"/>
+                                <rect key="frame" x="52" y="300" width="310" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="bDa-vU-RYU"/>
                                 </constraints>
@@ -114,31 +125,35 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KHu-BY-VdD"/>
                     </view>
+                    <navigationItem key="navigationItem" id="zr0-NJ-M7f"/>
+                    <connections>
+                        <segue destination="XDa-rb-0rI" kind="show" identifier="RegisterToChat" id="UxG-3d-A5p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1HL-Xh-Pbw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="799" y="138"/>
+            <point key="canvasLocation" x="1708.6956521739132" y="137.94642857142856"/>
         </scene>
         <!--Log In  View Controller-->
         <scene sceneID="Yet-uX-yNf">
             <objects>
-                <viewController title="Log In  View Controller" id="Caf-wS-2ys" sceneMemberID="viewController">
+                <viewController title="Log In  View Controller" id="Caf-wS-2ys" customClass="LogInViewController" customModule="Messenger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B2C-3n-bfq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Fo6-T1-Eqi">
-                                <rect key="frame" x="32" y="84" width="350" height="61"/>
-                                <color key="backgroundColor" red="0.64991664169999996" green="0.72020006349999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="32" y="128" width="350" height="61"/>
+                                <color key="backgroundColor" name="defaultBlue"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="61" id="w1H-k4-wK7"/>
                                     <constraint firstAttribute="height" constant="61" id="zXD-af-sUt"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAP-Zb-12T">
-                                <rect key="frame" x="52" y="256" width="310" height="40"/>
+                                <rect key="frame" x="52" y="300" width="310" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="4bX-uU-lLQ"/>
                                 </constraints>
@@ -146,13 +161,13 @@
                                 <state key="normal" title="Log in"/>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lWb-pG-ve3">
-                                <rect key="frame" x="32" y="165" width="350" height="61"/>
-                                <color key="backgroundColor" red="0.64991664169999996" green="0.72020006349999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="32" y="209" width="350" height="61"/>
+                                <color key="backgroundColor" name="defaultBlue"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="61" id="2ZK-E9-Wwc"/>
                                     <constraint firstAttribute="height" constant="61" id="PxL-JG-NPG"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                         </subviews>
@@ -170,15 +185,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bde-xI-5Jm"/>
                     </view>
+                    <navigationItem key="navigationItem" id="lyO-au-YdJ"/>
+                    <connections>
+                        <segue destination="XDa-rb-0rI" kind="show" identifier="LoginToChat" id="YqT-lF-P6F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EU5-D0-y7U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="799" y="822"/>
+            <point key="canvasLocation" x="1708.6956521739132" y="821.65178571428567"/>
         </scene>
-        <!--Messages View Controller-->
+        <!--Chat View Controller-->
         <scene sceneID="Uio-XR-qax">
             <objects>
-                <viewController title="Messages View Controller" id="XDa-rb-0rI" sceneMemberID="viewController">
+                <viewController title="Chat View Controller" id="XDa-rb-0rI" customClass="ChatViewController" customModule="Messenger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tt4-OS-Ns0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -203,7 +222,7 @@
                                         </state>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.64991664169999996" green="0.72020006349999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" name="defaultBlue"/>
                                 <constraints>
                                     <constraint firstItem="Vn4-86-xTf" firstAttribute="leading" secondItem="zH3-hS-k0I" secondAttribute="trailing" constant="20" id="2bA-eA-b8E"/>
                                     <constraint firstAttribute="trailing" secondItem="Vn4-86-xTf" secondAttribute="trailing" constant="20" id="5Qt-7c-OXZ"/>
@@ -216,7 +235,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L3S-cI-pxy">
-                                <rect key="frame" x="0.0" y="44" width="414" height="758"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="714"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" id="C82-Ba-b6c">
@@ -246,10 +265,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cWT-2i-6AY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1802.8985507246377" y="462.72321428571428"/>
+            <point key="canvasLocation" x="2713.04347826087" y="462.72321428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0Oq-g6-AJa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="V4z-bS-F8b" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tLC-J7-oDf">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="9As-X3-KoS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CdN-D5-2h1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-204.34782608695653" y="463.39285714285711"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="UxG-3d-A5p"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.up.circle.fill" catalog="system" width="128" height="121"/>
+        <namedColor name="defaultBlue">
+            <color red="0.64999997615814209" green="0.72000002861022949" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
     </resources>
 </document>
