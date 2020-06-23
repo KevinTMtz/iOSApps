@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A0367C524A28AE300FDD8CA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0367C424A28AE300FDD8CA /* Constants.swift */; };
+		0A0367C724A2919F00FDD8CA /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0367C624A2919F00FDD8CA /* Message.swift */; };
+		0A0367CA24A2985800FDD8CA /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0367C824A2985800FDD8CA /* MessageCell.swift */; };
+		0A0367CB24A2985800FDD8CA /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A0367C924A2985800FDD8CA /* MessageCell.xib */; };
 		0A7BE0E724A14DBD002ECF78 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7BE0E624A14DBD002ECF78 /* RegisterViewController.swift */; };
 		0A7BE0E924A14DD1002ECF78 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7BE0E824A14DD1002ECF78 /* LogInViewController.swift */; };
 		0A7BE0EB24A14DE1002ECF78 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7BE0EA24A14DE1002ECF78 /* ChatViewController.swift */; };
@@ -22,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A0367C424A28AE300FDD8CA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0A0367C624A2919F00FDD8CA /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		0A0367C824A2985800FDD8CA /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		0A0367C924A2985800FDD8CA /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		0A7BE0E624A14DBD002ECF78 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		0A7BE0E824A14DD1002ECF78 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		0A7BE0EA24A14DE1002ECF78 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +63,7 @@
 		0A9DB39D24A0291A00EA21A0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0A0367C624A2919F00FDD8CA /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -63,6 +72,8 @@
 			isa = PBXGroup;
 			children = (
 				0AB74CD424A01BAD001419CA /* Main.storyboard */,
+				0A0367C824A2985800FDD8CA /* MessageCell.swift */,
+				0A0367C924A2985800FDD8CA /* MessageCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -102,6 +113,7 @@
 			children = (
 				0AB74CCE24A01BAD001419CA /* AppDelegate.swift */,
 				0AB74CD024A01BAD001419CA /* SceneDelegate.swift */,
+				0A0367C424A28AE300FDD8CA /* Constants.swift */,
 				0A9DB39F24A0292B00EA21A0 /* Controllers */,
 				0A9DB39E24A0292300EA21A0 /* Views */,
 				0A9DB39D24A0291A00EA21A0 /* Models */,
@@ -191,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AB74CDB24A01BAE001419CA /* LaunchScreen.storyboard in Resources */,
+				0A0367CB24A2985800FDD8CA /* MessageCell.xib in Resources */,
 				0AB74CD824A01BAE001419CA /* Assets.xcassets in Resources */,
 				0A7BE0ED24A19C92002ECF78 /* GoogleService-Info.plist in Resources */,
 				0A9DB39C24A028CC00EA21A0 /* README.md in Resources */,
@@ -251,8 +264,11 @@
 				0AB74CCF24A01BAD001419CA /* AppDelegate.swift in Sources */,
 				0A7BE0E924A14DD1002ECF78 /* LogInViewController.swift in Sources */,
 				0AB74CD124A01BAD001419CA /* SceneDelegate.swift in Sources */,
+				0A0367C524A28AE300FDD8CA /* Constants.swift in Sources */,
+				0A0367C724A2919F00FDD8CA /* Message.swift in Sources */,
 				0A7BE0EB24A14DE1002ECF78 /* ChatViewController.swift in Sources */,
 				0A7BE0E724A14DBD002ECF78 /* RegisterViewController.swift in Sources */,
+				0A0367CA24A2985800FDD8CA /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

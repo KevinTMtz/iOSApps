@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kevin Chat 📬" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uaO-dy-tgO" customClass="CLTypingLabel" customModule="CLTypingLabel">
-                                <rect key="frame" x="207" y="417.66666666666669" width="0.0" height="61"/>
+                                <rect key="frame" x="45.333333333333343" y="417.66666666666669" width="323.66666666666663" height="61"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="YdG-xb-nRr"/>
                                 </constraints>
@@ -84,7 +84,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xZZ-5v-nKQ">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="45@k.com" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xZZ-5v-nKQ">
                                 <rect key="frame" x="32" y="128" width="350" height="61"/>
                                 <color key="backgroundColor" name="defaultBlue"/>
                                 <constraints>
@@ -93,7 +93,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fc8-M2-yTL">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="111111" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fc8-M2-yTL">
                                 <rect key="frame" x="32" y="209" width="350" height="61"/>
                                 <color key="backgroundColor" name="defaultBlue"/>
                                 <constraints>
@@ -109,6 +109,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Register"/>
+                                <connections>
+                                    <action selector="registerPressed:" destination="1dE-N1-XYq" eventType="touchUpInside" id="bBd-mK-og3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -127,6 +130,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="zr0-NJ-M7f"/>
                     <connections>
+                        <outlet property="emailTextField" destination="xZZ-5v-nKQ" id="2Nk-wB-fzx"/>
+                        <outlet property="passwordTextField" destination="fc8-M2-yTL" id="FqP-LE-DwL"/>
                         <segue destination="XDa-rb-0rI" kind="show" identifier="RegisterToChat" id="UxG-3d-A5p"/>
                     </connections>
                 </viewController>
@@ -142,7 +147,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Fo6-T1-Eqi">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="45@k.com" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Fo6-T1-Eqi">
                                 <rect key="frame" x="32" y="128" width="350" height="61"/>
                                 <color key="backgroundColor" name="defaultBlue"/>
                                 <constraints>
@@ -159,8 +164,11 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Log in"/>
+                                <connections>
+                                    <action selector="logInPressed:" destination="Caf-wS-2ys" eventType="touchUpInside" id="qSd-4M-Cet"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lWb-pG-ve3">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="111111" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lWb-pG-ve3">
                                 <rect key="frame" x="32" y="209" width="350" height="61"/>
                                 <color key="backgroundColor" name="defaultBlue"/>
                                 <constraints>
@@ -187,7 +195,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="lyO-au-YdJ"/>
                     <connections>
-                        <segue destination="XDa-rb-0rI" kind="show" identifier="LoginToChat" id="YqT-lF-P6F"/>
+                        <outlet property="emailLabel" destination="Fo6-T1-Eqi" id="HRp-ha-UQ0"/>
+                        <outlet property="passwordLabel" destination="lWb-pG-ve3" id="A6v-aa-BAX"/>
+                        <segue destination="XDa-rb-0rI" kind="show" identifier="LogInToChat" id="YqT-lF-P6F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EU5-D0-y7U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -220,6 +230,9 @@
                                         <state key="normal" backgroundImage="arrow.up.circle.fill" catalog="system">
                                             <color key="titleColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="sendPressed:" destination="XDa-rb-0rI" eventType="touchUpInside" id="nl2-c7-y2Z"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="defaultBlue"/>
@@ -234,19 +247,9 @@
                                     <constraint firstAttribute="bottom" secondItem="zH3-hS-k0I" secondAttribute="bottom" constant="44" id="hNH-4h-BzP"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L3S-cI-pxy">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L3S-cI-pxy">
                                 <rect key="frame" x="0.0" y="88" width="414" height="714"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" id="C82-Ba-b6c">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="C82-Ba-b6c" id="kCN-xg-9Yi">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -261,7 +264,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="e6v-Di-mkc"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="RU6-oY-16Z"/>
+                    <navigationItem key="navigationItem" title="Kevin Chat 📬" id="RU6-oY-16Z">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="6T2-vf-tnl">
+                            <connections>
+                                <action selector="logOutPressed:" destination="XDa-rb-0rI" id="INq-HW-QPb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="messageTextField" destination="zH3-hS-k0I" id="Xjd-CF-rrX"/>
+                        <outlet property="tableView" destination="L3S-cI-pxy" id="FCH-uf-jxC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cWT-2i-6AY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -287,7 +300,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="UxG-3d-A5p"/>
+        <segue reference="YqT-lF-P6F"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.up.circle.fill" catalog="system" width="128" height="121"/>
