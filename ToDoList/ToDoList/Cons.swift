@@ -10,4 +10,5 @@ import Foundation
 
 struct Cons {
     static let toDoViewCell = "ToDoItemCell"
+    static let savedArray = "ToDoListArray"
 }
