@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A336E7824B112DC00734227 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0A336E7624B112DC00734227 /* DataModel.xcdatamodeld */; };
 		0A650A0924AD3B9600161D83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A650A0824AD3B9600161D83 /* AppDelegate.swift */; };
 		0A650A0B24AD3B9600161D83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A650A0A24AD3B9600161D83 /* SceneDelegate.swift */; };
 		0A650A0D24AD3B9600161D83 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A650A0C24AD3B9600161D83 /* ToDoListViewController.swift */; };
@@ -15,10 +16,10 @@
 		0A650A1524AD3B9700161D83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A650A1324AD3B9700161D83 /* LaunchScreen.storyboard */; };
 		0A650A1D24AD3BFB00161D83 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0A650A1C24AD3BFB00161D83 /* README.md */; };
 		0A650A1F24AD420800161D83 /* Cons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A650A1E24AD420800161D83 /* Cons.swift */; };
-		0AE4E2FC24AFDC560091E926 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE4E2FB24AFDC560091E926 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A336E7724B112DC00734227 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		0A650A0524AD3B9600161D83 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A650A0824AD3B9600161D83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A650A0A24AD3B9600161D83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,7 +30,6 @@
 		0A650A1624AD3B9700161D83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A650A1C24AD3BFB00161D83 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0A650A1E24AD420800161D83 /* Cons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cons.swift; sourceTree = "<group>"; };
-		0AE4E2FB24AFDC560091E926 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +87,7 @@
 		0AE4E2FD24AFDC5D0091E926 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				0AE4E2FB24AFDC560091E926 /* Item.swift */,
+				0A336E7624B112DC00734227 /* DataModel.xcdatamodeld */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -172,9 +172,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AE4E2FC24AFDC560091E926 /* Item.swift in Sources */,
 				0A650A0D24AD3B9600161D83 /* ToDoListViewController.swift in Sources */,
 				0A650A0924AD3B9600161D83 /* AppDelegate.swift in Sources */,
+				0A336E7824B112DC00734227 /* DataModel.xcdatamodeld in Sources */,
 				0A650A0B24AD3B9600161D83 /* SceneDelegate.swift in Sources */,
 				0A650A1F24AD420800161D83 /* Cons.swift in Sources */,
 			);
@@ -374,6 +374,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0A336E7624B112DC00734227 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0A336E7724B112DC00734227 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 0A336E7724B112DC00734227 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0A6509FD24AD3B9600161D83 /* Project object */;
 }
