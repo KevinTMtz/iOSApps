@@ -9,6 +9,8 @@
 import Foundation
 
 struct Cons {
-    static let toDoViewCell = "ToDoItemCell"
-    static let savedArray = "ToDoListArray"
+    static let segueToList = "goToItems"
+    static let categoryCell = "CategoryCell"
+    
+    static let itemCell = "ToDoItemCell"
 }

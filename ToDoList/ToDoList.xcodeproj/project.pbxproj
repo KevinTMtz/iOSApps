@@ -16,6 +16,7 @@
 		0A650A1524AD3B9700161D83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A650A1324AD3B9700161D83 /* LaunchScreen.storyboard */; };
 		0A650A1D24AD3BFB00161D83 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0A650A1C24AD3BFB00161D83 /* README.md */; };
 		0A650A1F24AD420800161D83 /* Cons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A650A1E24AD420800161D83 /* Cons.swift */; };
+		0AADD4DF24B3BB5400072E26 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AADD4DE24B3BB5400072E26 /* CategoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		0A650A1624AD3B9700161D83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A650A1C24AD3BFB00161D83 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0A650A1E24AD420800161D83 /* Cons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cons.swift; sourceTree = "<group>"; };
+		0AADD4DE24B3BB5400072E26 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CategoryViewController.swift; path = ToDoList/CategoryViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +68,8 @@
 				0A650A1E24AD420800161D83 /* Cons.swift */,
 				0A650A0824AD3B9600161D83 /* AppDelegate.swift */,
 				0A650A0A24AD3B9600161D83 /* SceneDelegate.swift */,
-				0AE4E2FE24AFDC760091E926 /* Controller */,
-				0AE4E2FD24AFDC5D0091E926 /* Data Model */,
+				0AE4E2FE24AFDC760091E926 /* Controllers */,
+				0AE4E2FD24AFDC5D0091E926 /* DataModels */,
 				0AE4E2FA24AFDB8B0091E926 /* Views */,
 				0A650A1124AD3B9700161D83 /* Assets.xcassets */,
 				0A650A1324AD3B9700161D83 /* LaunchScreen.storyboard */,
@@ -84,20 +86,21 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		0AE4E2FD24AFDC5D0091E926 /* Data Model */ = {
+		0AE4E2FD24AFDC5D0091E926 /* DataModels */ = {
 			isa = PBXGroup;
 			children = (
 				0A336E7624B112DC00734227 /* DataModel.xcdatamodeld */,
 			);
-			path = "Data Model";
+			path = DataModels;
 			sourceTree = "<group>";
 		};
-		0AE4E2FE24AFDC760091E926 /* Controller */ = {
+		0AE4E2FE24AFDC760091E926 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0AADD4DE24B3BB5400072E26 /* CategoryViewController.swift */,
 				0A650A0C24AD3B9600161D83 /* ToDoListViewController.swift */,
 			);
-			path = Controller;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +179,7 @@
 				0A650A0924AD3B9600161D83 /* AppDelegate.swift in Sources */,
 				0A336E7824B112DC00734227 /* DataModel.xcdatamodeld in Sources */,
 				0A650A0B24AD3B9600161D83 /* SceneDelegate.swift in Sources */,
+				0AADD4DF24B3BB5400072E26 /* CategoryViewController.swift in Sources */,
 				0A650A1F24AD420800161D83 /* Cons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
