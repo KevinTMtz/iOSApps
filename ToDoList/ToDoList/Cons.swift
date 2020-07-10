@@ -7,10 +7,13 @@
 //
 
 import Foundation
+import ChameleonFramework
 
 struct Cons {
     static let segueToList = "goToItems"
     static let categoryCell = "Cell"
     
     static let itemCell = "Cell"
+    
+    static let defaultPurple = UIColor(hexString: "#5f27cd")
 }

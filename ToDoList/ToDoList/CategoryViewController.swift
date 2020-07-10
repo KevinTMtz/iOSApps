@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import ChameleonFramework
 
 class CategoryViewController: SwipeTableViewController {
     
@@ -18,6 +19,8 @@ class CategoryViewController: SwipeTableViewController {
         super.viewDidLoad()
         
         loadData()
+        
+        tableView.separatorStyle = .none
     }
     
     // MARK: - Add New Categories
@@ -58,6 +61,17 @@ class CategoryViewController: SwipeTableViewController {
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
         
         cell.textLabel?.text = categoryArray?[indexPath.row].name ?? ""
+        
+        cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        cell.textLabel?.textColor = ContrastColorOf(Cons.defaultPurple!, returnFlat: true)
+        
+        cell.backgroundColor = Cons.defaultPurple?.darken(byPercentage: CGFloat(0.75) * CGFloat(indexPath.row) / CGFloat(categoryArray!.count))
+        
+        // With Gradient
+//        cell.backgroundColor = UIColor(gradientStyle: .diagonal, withFrame: .init(origin: .zero, size: .init(width: UIScreen.main.bounds.size.width, height: 80)), andColors: [
+//            .clear,
+//            UIColor(hexString: "#\((9-indexPath.row)%10)f27cd")!
+//        ])
         
         return cell
     }

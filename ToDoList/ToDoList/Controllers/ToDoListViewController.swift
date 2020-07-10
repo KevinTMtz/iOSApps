@@ -8,16 +8,20 @@
 
 import UIKit
 import RealmSwift
+import ChameleonFramework
 
 class ToDoListViewController: SwipeTableViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var navigationBar: UINavigationItem!
     
     let realm = try! Realm()
     var itemArray: Results<Item>?
     
     var selectedCategory: Category? {
         didSet {
+            navigationBar.title = selectedCategory?.name
+            
             loadData()
         }
     }
@@ -26,6 +30,8 @@ class ToDoListViewController: SwipeTableViewController {
         super.viewDidLoad()
         
         searchBar.delegate = self
+        
+        tableView.separatorStyle = .none
         
         loadData()
     }
@@ -47,6 +53,11 @@ class ToDoListViewController: SwipeTableViewController {
         } else {
             cell.textLabel?.text = "No Items Added"
         }
+        
+        cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        cell.textLabel?.textColor = ContrastColorOf(Cons.defaultPurple!, returnFlat: true)
+        
+        cell.backgroundColor = Cons.defaultPurple?.darken(byPercentage: CGFloat(0.75) * CGFloat(indexPath.row) / CGFloat(itemArray!.count))
         
         return cell
     }
