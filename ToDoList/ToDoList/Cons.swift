@@ -10,7 +10,7 @@ import Foundation
 
 struct Cons {
     static let segueToList = "goToItems"
-    static let categoryCell = "CategoryCell"
+    static let categoryCell = "Cell"
     
-    static let itemCell = "ToDoItemCell"
+    static let itemCell = "Cell"
 }
