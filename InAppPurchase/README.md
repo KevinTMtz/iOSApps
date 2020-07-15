@@ -6,5 +6,5 @@ In app purchase implementation.
 </p>
 
 <p align="center">
-  <img width="300" height="auto" src="screenShot.jpg">
+  <img width="300" height="auto" src="screenShot.jpeg">
 </p>

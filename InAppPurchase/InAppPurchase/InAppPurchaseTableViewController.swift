@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import StoreKit
 
-class InAppPurchaseTableViewController: UITableViewController {
+class InAppPurchaseTableViewController: UITableViewController, SKPaymentTransactionObserver {
+    
+    let productID = "com.KevinTMtz.InAppPurchase.PremiumQuotes"
     
     var freeQuotes = [
         "“Live as if you were to die tomorrow. Learn as if you were to live forever.” – Mahatma Gandhi",
@@ -26,22 +29,99 @@ class InAppPurchaseTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        SKPaymentQueue.default().add(self)
+        
+        if isPurchased() {
+            showPremiumQuotes()
+        }
     }
     
+    // MARK: - Table View Datasource
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        freeQuotes.count
+        if isPurchased() {
+            return freeQuotes.count
+        }
+        return freeQuotes.count + 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let newCell = tableView.dequeueReusableCell(withIdentifier: "QuoteCell", for: indexPath)
         
-        newCell.textLabel?.text = freeQuotes[indexPath.row]
-        newCell.textLabel?.numberOfLines = 0
+        if indexPath.row < freeQuotes.count {
+            newCell.textLabel?.text = freeQuotes[indexPath.row]
+            newCell.textLabel?.numberOfLines = 0
+            newCell.textLabel?.textColor = .label
+            newCell.accessoryType = .none
+        } else {
+            newCell.textLabel?.text = "Buy More Quotes"
+            newCell.textLabel?.textColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
+            newCell.textLabel?.numberOfLines = 0
+            newCell.accessoryType = .disclosureIndicator
+        }
         
         return newCell
     }
     
-    @IBAction func restorePress(_ sender: UIBarButtonItem) {
+    // MARK: - Table view delegate methods
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == freeQuotes.count {
+            buyPremiumQuotes()
+        }
         
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    // MARK: - In App purchase methods
+    
+    func buyPremiumQuotes() {
+        if SKPaymentQueue.canMakePayments() {
+            let paymentRequest = SKMutablePayment()
+            paymentRequest.productIdentifier = productID
+            SKPaymentQueue.default().add(paymentRequest)
+        } else {
+            print("Cannot make payments")
+        }
+    }
+    
+    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+        for transaction in transactions {
+            if transaction.transactionState == .purchased {
+                showPremiumQuotes()
+                
+                SKPaymentQueue.default().finishTransaction(transaction)
+            } else if transaction.transactionState == .failed {
+                print("Transaction failed")
+                
+                if let error = transaction.error {
+                    print("Error description: \(error.localizedDescription)")
+                }
+                
+                SKPaymentQueue.default().finishTransaction(transaction)
+            } else if transaction.transactionState == .restored {
+                showPremiumQuotes()
+                
+                navigationItem.setRightBarButton(nil, animated: true)
+                
+                SKPaymentQueue.default().finishTransaction(transaction)
+            }
+        }
+    }
+    
+    func showPremiumQuotes() {
+        UserDefaults.standard.set(true, forKey: productID)
+        
+        freeQuotes.append(contentsOf: premiunQuotes)
+        tableView.reloadData()
+    }
+    
+    func isPurchased() -> Bool {
+        return UserDefaults.standard.bool(forKey: productID)
+    }
+    
+    @IBAction func restorePress(_ sender: UIBarButtonItem) {
+        SKPaymentQueue.default().restoreCompletedTransactions()
     }
 }
