@@ -9,20 +9,52 @@
 import Foundation
 
 struct CalculatorLogic {
-    var number: Double
+    private var number: Double?
     
-    init(number: Double) {
+    private var intermediateCalculation: (n1: Double, operation: String)?
+    
+    mutating func setNumber(_ number: Double) {
         self.number = number
     }
     
-    func calculate(symbol: String) -> Double? {
-        if symbol == "AC" {
-            return 0.0
-        } else if symbol == "+/-" {
-            return number * -1
-        } else if symbol == "%" {
-            return number * 0.01
+    mutating func calculate(symbol: String) -> Double? {
+        if let num = number {
+            switch symbol {
+            case "AC":
+                return 0.0
+            case "+/-":
+                return num * -1
+            case "%":
+                return num * 0.01
+            case "=":
+                return performTwoNumberCalculation(n2: num)
+            default:
+                intermediateCalculation = (n1: num, operation: symbol)
+            }
         }
+        
+        return nil
+    }
+    
+    private func performTwoNumberCalculation(n2: Double) -> Double? {
+        if let n1 = intermediateCalculation?.n1, let operation = intermediateCalculation?.operation {
+            switch operation {
+            case "+":
+                return n1 + n2
+            case "-":
+                return n1 - n2
+            case "×":
+                return n1 * n2
+            case "÷":
+                if (n2 == 0.0) {
+                    return n1
+                }
+                return n1 / n2
+            default:
+                fatalError("Operation does not match any of the cases.")
+            }
+        }
+        
         return nil
     }
 }
