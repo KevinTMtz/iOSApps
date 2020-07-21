@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Select or take a photo-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Food_Identifier" customModuleProvider="target" sceneMemberID="viewController">
@@ -28,7 +28,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="AbX-bf-Nbc">
+                    <navigationItem key="navigationItem" title="Select or take a photo" id="AbX-bf-Nbc">
                         <barButtonItem key="leftBarButtonItem" image="photo" catalog="system" id="9Uc-Y6-ctg">
                             <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
