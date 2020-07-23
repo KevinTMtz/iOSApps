@@ -16,15 +16,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D6q-5x-hNS">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="D6q-5x-hNS" secondAttribute="height" multiplier="1:1" id="xTK-iE-pAH"/>
+                                </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="nDN-GF-qUh">
+                                <rect key="frame" x="20" y="522" width="374" height="340"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="D6q-5x-hNS" secondAttribute="bottom" id="73D-sL-But"/>
+                            <constraint firstItem="nDN-GF-qUh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0ks-sK-7Ns"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nDN-GF-qUh" secondAttribute="trailing" constant="20" id="JGX-wt-Jrh"/>
+                            <constraint firstItem="nDN-GF-qUh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Oo2-DO-sZI"/>
                             <constraint firstItem="D6q-5x-hNS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="R0J-AO-Lsu"/>
                             <constraint firstItem="D6q-5x-hNS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dlK-vP-rSo"/>
                             <constraint firstItem="D6q-5x-hNS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="l29-jy-YKk"/>
+                            <constraint firstItem="nDN-GF-qUh" firstAttribute="top" secondItem="D6q-5x-hNS" secondAttribute="bottom" constant="20" id="xpy-O2-g43"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -43,6 +55,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="infoLabel" destination="nDN-GF-qUh" id="VdN-0N-Qxx"/>
                         <outlet property="mainImageView" destination="D6q-5x-hNS" id="Vtv-TQ-9hJ"/>
                     </connections>
                 </viewController>
