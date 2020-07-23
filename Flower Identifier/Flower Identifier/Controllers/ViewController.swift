@@ -11,6 +11,7 @@ import CoreML
 import Vision
 import Alamofire
 import SwiftyJSON
+import SDWebImage
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -31,7 +32,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         if let userTakenPhoto = info[.editedImage] as? UIImage {
-            mainImageView.image = userTakenPhoto
+            //mainImageView.image = userTakenPhoto
             
             guard let ciImage = CIImage(image: userTakenPhoto) else {
                 fatalError("Unable to convert UIImage to CIImage.")
@@ -71,12 +72,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let parameters : [String:String] = [
             "format" : "json",
             "action" : "query",
-            "prop" : "extracts",
+            "prop" : "extracts|pageimages",
             "exintro" : "",
             "explaintext" : "",
             "titles" : flowerName,
             "indexpageids" : "",
             "redirects" : "1",
+            "pithumbsize" : "1000"
         ]
         
         Alamofire.request(wikipediaURl, method: .get, parameters: parameters).responseJSON { (response) in
@@ -86,6 +88,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 let pageId = flowerJSON["query"]["pageids"][0].stringValue
                 
                 let flowerDescription = flowerJSON["query"]["pages"][pageId]["extract"].stringValue
+                
+                let flowerImgUrl = flowerJSON["query"]["pages"][pageId]["thumbnail"]["source"].stringValue
+                
+                self.mainImageView.sd_setImage(with: URL(string: flowerImgUrl))
                 
                 self.infoLabel.text = flowerDescription
             }

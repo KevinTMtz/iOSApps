@@ -10,5 +10,9 @@ Implementation of oxford102.caffemodel converted to a Core ML model.
 </p>
 
 <p align="center">
-  <img width="300" height="auto" src="screenShot.jpeg">
+  <img width="300" height="auto" src="screenShot1.jpg">
+</p>
+
+<p align="center">
+  <img width="300" height="auto" src="screenShot2.jpg">
 </p>

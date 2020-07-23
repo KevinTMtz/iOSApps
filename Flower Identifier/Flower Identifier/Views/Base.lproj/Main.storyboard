@@ -22,7 +22,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="nDN-GF-qUh">
-                                <rect key="frame" x="20" y="522" width="374" height="340"/>
+                                <rect key="frame" x="20" y="522" width="374" height="320"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -30,9 +30,9 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="nDN-GF-qUh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-20" id="0Ns-GC-xU3"/>
                             <constraint firstItem="nDN-GF-qUh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0ks-sK-7Ns"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nDN-GF-qUh" secondAttribute="trailing" constant="20" id="JGX-wt-Jrh"/>
-                            <constraint firstItem="nDN-GF-qUh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Oo2-DO-sZI"/>
                             <constraint firstItem="D6q-5x-hNS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="R0J-AO-Lsu"/>
                             <constraint firstItem="D6q-5x-hNS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dlK-vP-rSo"/>
                             <constraint firstItem="D6q-5x-hNS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="l29-jy-YKk"/>
