@@ -14,6 +14,7 @@
 		0A8C8C4424CC98F500995C28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A8C8C4324CC98F500995C28 /* Assets.xcassets */; };
 		0A8C8C4724CC98F500995C28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8C8C4524CC98F500995C28 /* LaunchScreen.storyboard */; };
 		0A8C8C4F24CC990500995C28 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0A8C8C4E24CC990500995C28 /* README.md */; };
+		0ACDA3B924CD2FCA00C90BCD /* TweetFeelingsClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0ACDA3B824CD2FCA00C90BCD /* TweetFeelingsClassifier.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		0A8C8C4624CC98F500995C28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A8C8C4824CC98F500995C28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A8C8C4E24CC990500995C28 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0ACDA3B824CD2FCA00C90BCD /* TweetFeelingsClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TweetFeelingsClassifier.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				0A8C8C4324CC98F500995C28 /* Assets.xcassets */,
 				0A8C8C4524CC98F500995C28 /* LaunchScreen.storyboard */,
 				0A8C8C4824CC98F500995C28 /* Info.plist */,
+				0ACDA3B824CD2FCA00C90BCD /* TweetFeelingsClassifier.mlmodel */,
 			);
 			path = "Twitter Feelings";
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			files = (
 				0A8C8C3F24CC98F400995C28 /* ViewController.swift in Sources */,
 				0A8C8C3B24CC98F400995C28 /* AppDelegate.swift in Sources */,
+				0ACDA3B924CD2FCA00C90BCD /* TweetFeelingsClassifier.mlmodel in Sources */,
 				0A8C8C3D24CC98F400995C28 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
