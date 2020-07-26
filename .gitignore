@@ -27,3 +27,4 @@ DerivedData/
 
 # MacOS
 .DS_Store
+**/Secret.plist
