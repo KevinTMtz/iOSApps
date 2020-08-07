@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0ABFFD8424DA2BD600430F82 /* AR Roll Dices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR Roll Dices.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ABFFD8424DA2BD600430F82 /* Roll Dices AR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Roll Dices AR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ABFFD8724DA2BD600430F82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0ABFFD8924DA2BD600430F82 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		0ABFFD8B24DA2BD600430F82 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,7 +51,7 @@
 		0ABFFD8524DA2BD600430F82 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0ABFFD8424DA2BD600430F82 /* AR Roll Dices.app */,
+				0ABFFD8424DA2BD600430F82 /* Roll Dices AR.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,7 +87,7 @@
 			);
 			name = "AR Roll Dices";
 			productName = "AR Roll Dices";
-			productReference = 0ABFFD8424DA2BD600430F82 /* AR Roll Dices.app */;
+			productReference = 0ABFFD8424DA2BD600430F82 /* Roll Dices AR.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -296,7 +296,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.KevinTMtz.AR-Roll-Dices";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Roll Dices AR";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -314,7 +314,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.KevinTMtz.AR-Roll-Dices";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Roll Dices AR";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
