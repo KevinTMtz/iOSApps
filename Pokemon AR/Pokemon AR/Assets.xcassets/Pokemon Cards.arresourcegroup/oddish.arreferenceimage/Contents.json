@@ -1,0 +1,15 @@
+{
+  "images" : [
+    {
+      "filename" : "oddish.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "width" : 0.065000000000000002
+  }
+}
