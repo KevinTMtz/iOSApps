@@ -1,2 +1,2 @@
 # iOS Apps
-Apps developed for learning the technologies and techniques of iOS development. 
+Multiple iOS apps for different purposes with a variety of technologies and frameworks.
